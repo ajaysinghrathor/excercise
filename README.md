@@ -1,6 +1,6 @@
 # excercise: Run Instructions
 
-How to Run processor-service & data-service
+#####How to Run processor-service & data-service
 
 1. checkout and import both project as Maven project
 2. run mvn clean install
@@ -19,7 +19,7 @@ How to Run processor-service & data-service
 7. feed data can be access with following url:
 	http://<host>:8080/api/data/feeds
 
-How to Run front-end-service:
+#####How to Run front-end-service:
 1. after checking project
 2. run following commands:
 	npm install
