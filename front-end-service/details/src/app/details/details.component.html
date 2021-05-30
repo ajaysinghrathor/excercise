@@ -1,0 +1,91 @@
+<p>details works!</p>
+<!--
+<div>
+    <h1>Angular HTML Table Example</h1>
+    <table>
+       <thead>
+          <tr>
+             <th>#ID</th>
+             <th>Data</th>
+             <th>Email</th>
+             <th>Phone</th>
+             <th>Address</th>
+             <th>Action</th>
+          </tr>
+       </thead>
+       <tbody>
+          <tr *ngFor="let item of feedData">
+             <th>{{ item.id }}</th>
+             <td>{{ item.date }}</td>
+             <td>{{ item.type }}</td>
+             <td>{{ item.symbol}}</td>
+             <td>{{ item.status }}</td>
+             <td>
+                <button type="button" >Edit</button>
+                <button type="button" >Delete</button>
+             </td>
+          </tr>
+       </tbody>
+    </table>
+ </div>
+-->
+<table mat-table [dataSource]="feedData" class="mat-elevation-z8">
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> #ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef> Scheme Code </th>
+      <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="type">
+      <th mat-header-cell *matHeaderCellDef> Scheme Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="symbol">
+      <th mat-header-cell *matHeaderCellDef> ISIN Div Payout/ISIN Growth </th>
+      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="shares">
+        <th mat-header-cell *matHeaderCellDef> ISIN Div Reinvestment </th>
+        <td mat-cell *matCellDef="let element"> {{element.shares}} </td>
+      </ng-container>
+
+    <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef> Net Asset Value </th>
+        <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="costs">
+        <th mat-header-cell *matHeaderCellDef> Repurchase Price </th>
+        <td mat-cell *matCellDef="let element"> {{element.costs}} </td>
+      </ng-container>
+
+    <ng-container matColumnDef="fees">
+        <th mat-header-cell *matHeaderCellDef> Sale Price </th>
+        <td mat-cell *matCellDef="let element"> {{element.fees}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="amount">
+        <th mat-header-cell *matHeaderCellDef> Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef> status </th>
+        <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="feedName">
+        <th mat-header-cell *matHeaderCellDef> Feed File Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.feedName}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
