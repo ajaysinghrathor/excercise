@@ -27,7 +27,7 @@ public class DataService {
         List<Portfolio> data = null;
         try{
             data = repository.findAll();
-            //data = data.subList(0,100);
+            data = data.subList(0,100);
             if(data.isEmpty()){
                 status = 201;
             }
