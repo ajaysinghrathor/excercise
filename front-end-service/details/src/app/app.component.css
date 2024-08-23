@@ -11,14 +11,14 @@
   
   /* First child div: 10% height, 100% width of master div */
   .child-div-1 {
-    height: 15%;
+    height: 40%;
     width: 100%;
     background-color: lightcoral;
   }
   
   /* Second child div: 50% height, 100% width of master div */
   .child-div-2 {
-    height: 20%;
+    height: 10%;
     width: 100%;
     background-color: lightgreen;
   }

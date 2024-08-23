@@ -1,7 +1,10 @@
-<p>file-upload works!</p>
+<div class="file-upload">
+    <input type="file" (change)="onFileSelected($event)"  />
+    <label for="fileInput" class="file-label">
+        <i class="fas fa-cloud-upload-alt"> Choose a file </i>
+    </label>
+    <span id="fileName" class="file-name">No file selected</span>
 
-<h2>File Upload</h2>
-
-<input type="file" (change)="onFileSelected($event)" />
-<button (click)="onUpload()">Upload</button>
+    <span id="fileName" class="file-name"><button (click)="onUpload()">Upload</button></span>
+</div>
 
