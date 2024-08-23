@@ -17,14 +17,16 @@
 	select * from FeedMetaData; //this table will store feed meta data.
 	select * from portfolio; // this table will store feed file data.
 7. feed data can be access with following url:
-	http://<host>:8080/api/data/feeds
+	http://localhost:8080/api/data/feeds
 
 ##### How to Run front-end-service:
 1. after checking project
 2. run following commands:
 	npm install
-	ng run build
-	ng server --open
+	ng serve
 3. access ui with url:
-	http://<host>:4200/
+	http://localhost:4200/
+
+##################### DataService Swagger URL ############
+http://localhost:7070/swagger-ui/index.html
 
