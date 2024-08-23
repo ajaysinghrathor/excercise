@@ -8,12 +8,14 @@ import { MetadataComponent } from './metadata/metadata.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FileuploadComponent } from './fileupload/fileupload.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DetailsComponent,
-    MetadataComponent
+    MetadataComponent,
+    FileuploadComponent
   ],
   imports: [
     BrowserModule,
