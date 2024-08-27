@@ -50,9 +50,9 @@
           <td mat-cell *matCellDef="let element"> {{element.status}} </td>
       </ng-container>
 
-      <ng-container matColumnDef="feedName">
-          <th mat-header-cell *matHeaderCellDef> Feed File Name </th>
-          <td mat-cell *matCellDef="let element"> {{element.feedName}} </td>
+      <ng-container matColumnDef="feed">
+          <th mat-header-cell *matHeaderCellDef> Feed Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.feed}} </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

@@ -27,4 +27,8 @@
 	ng server --open
 3. access ui with url:
 	http://<host>:4200/
+	
+##################### DataService Swagger URL ############
+
+http://localhost:7070/swagger-ui/index.html
 

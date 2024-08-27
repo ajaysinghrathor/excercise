@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DetailService } from '../detail.service';
-import { FeeddataModule } from '../feeddata/feeddata.module';
+import { FeeddataModule } from '../modules/feeddata.module';
 
 
 @Component({
@@ -8,20 +8,7 @@ import { FeeddataModule } from '../feeddata/feeddata.module';
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.css']
 })
-/*
-export interface PeriodicElement {
-  id: string;
-  date: string;
-  type: string;
-  symbol: string;
-  shares: string;
-  price: string;
-  costs: string;
-  fees: string;
-  amount: string;
-  status: string;
-  feedName: string;
-}*/
+
 
 export class DetailsComponent implements OnInit {
   feedData : FeeddataModule[]= [];
@@ -36,7 +23,7 @@ export class DetailsComponent implements OnInit {
                                 'fees',
                                 'amount',
                                 'status',
-                                'feedName'
+                                'feed'
                               ];
   
 

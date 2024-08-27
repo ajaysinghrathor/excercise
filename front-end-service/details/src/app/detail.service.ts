@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { catchError, tap, map } from 'rxjs/operators';
-import { FeeddataModule } from './feeddata/feeddata.module';
+import { FeeddataModule } from './modules/feeddata.module';
 
 
 @Injectable({
@@ -11,7 +11,7 @@ import { FeeddataModule } from './feeddata/feeddata.module';
 })
 export class DetailService {
 
-  private url: string = "http://localhost:8080/api/data/feeds";
+  private url: string = "http://localhost:6060/api/data/funds";
   constructor(private http: HttpClient) {}
 
   public getFeedData() : Observable<FeeddataModule[]>{

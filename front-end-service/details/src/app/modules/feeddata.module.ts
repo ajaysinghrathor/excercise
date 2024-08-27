@@ -20,10 +20,10 @@ export class FeeddataModule {
   fees: string= "";
   amount: string= "";
   status: string= "";
-  feedName: string= "";
+  feed: string= "";
 
   public FeeddataModule(date : string, type :string,symbol  :string, shares :string , price :string ,
-     costs :string, fees :string, amount :string) {
+     costs :string, fees :string, amount :string, status:string, feed:string) {
     this.date = date;
     this.type = type;
     this.symbol = symbol;
@@ -32,9 +32,11 @@ export class FeeddataModule {
     this.costs = costs;
     this.fees = fees;
     this.amount = amount;
+    this.status = status;
+    this.feed = feed;
 }
 
-  public getId() : string {
+public getId() : string {
     return this.id;
 }
 
@@ -101,5 +103,22 @@ public getAmount() : string{
 public setAmount(amount :string) {
     this.amount = amount;
 }
+
+public getFeed() : string{
+    return this.feed;
+}
+
+public setFeed(feed :string) {
+    this.feed = feed;
+}
+
+public getStatus() : string{
+    return this.status;
+}
+
+public setStatus(status :string) {
+    this.status = status;
+}
+
 
 }
