@@ -15,7 +15,7 @@ export class DetailService {
   constructor(private http: HttpClient) {}
 
   public getFeedData() : Observable<FeeddataModule[]>{
-    return this.http.get<FeeddataModule[]>(this.url); 
+    return this.http.get<FeeddataModule[]>(this.url);
   }
 }
 

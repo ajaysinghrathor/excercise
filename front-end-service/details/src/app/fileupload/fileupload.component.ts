@@ -21,7 +21,7 @@ export class FileuploadComponent implements OnInit{
       const formData = new FormData();
       formData.append('file', this.selectedFile, this.selectedFile.name);
 
-      this.http.post('http://localhost:7070/api/feeds/upload', formData)
+      this.http.post('http://localhost:8080/api/feeds/upload', formData)
         .subscribe(response => {
           console.log('Upload successful', response);
         }, error => {
@@ -33,7 +33,7 @@ export class FileuploadComponent implements OnInit{
   }
 
   ngOnInit(): void {
- 
+
   }
 
 }

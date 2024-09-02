@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: details-deployment
+  namespace: frontendapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: details
+  template:
+    metadata:
+      labels:
+        app: details
+    spec:
+      containers:
+      - name: details-container
+        image: containerrepo.azurecr.io/details:v08
+        ports:
+        - containerPort: 80
+        env:
+        - name: ENV_VARIABLE_NAME
+          value: "value"
